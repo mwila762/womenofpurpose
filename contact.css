@@ -1,0 +1,78 @@
+/* Contact Page Layout */
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  min-height: calc(100vh - 160px); /* fill screen minus header/footer */
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  color: #8c3c5c;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #c68c9f;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #a7647c;
+}
+
+/* Header with Rounded Background */
+.nav-header {
+  background-color: #c68c9f;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-link {
+  background-color: white;
+  color: #c68c9f;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff7f5;
+}

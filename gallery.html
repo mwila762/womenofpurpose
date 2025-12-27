@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Women of Purpose</title>
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+  <!-- Rounded Header -->
+  <header class="nav-header">
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+    </nav>
+  </header>
+
+  <!-- Main Gallery Section -->
+  <main class="gallery-container">
+    <h1>Gallery</h1>
+    <div class="slider-container">
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <div class="slides">
+        <img src="images/women image 1.jpg" class="slide active" alt="Gallery Image 1" />
+        <img src="images/women image 3.jpg" class="slide" alt="Gallery Image 3" />
+        <img src="images/women image 4.jpg" class="slide" alt="Gallery Image 4" />
+      </div>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; Women of Purpose. All rights reserved.
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      showSlide(currentSlide);
+    }
+  </script>
+</body>
+</html>
